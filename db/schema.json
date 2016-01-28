@@ -1,0 +1,42 @@
+{
+
+  "migration_id": 2016012800361388,
+
+  "models": {
+
+    "Task": {
+
+      "table": "tasks",
+
+      "columns": [
+        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
+        {"name": "name", "type": "string", "properties": {}},
+        {"name": "description", "type": "string", "properties": {}},
+        {"name": "min_minutes", "type": "int", "properties": {}},
+        {"name": "prio", "type": "int", "properties": {}},
+        {"name": "user_id", "type": "int", "properties": {}},
+        {"name": "start", "type": "int", "properties": {}},
+        {"name": "created_at", "type": "datetime", "properties": {}},
+        {"name": "updated_at", "type": "datetime", "properties": {}}
+      ]
+
+    },
+
+    "User": {
+
+      "table": "users",
+
+      "columns": [
+        {"name": "id", "type": "serial", "properties": {"nullable":false,"primary_key":true,"auto_increment":true}},
+        {"name": "email", "type": "string", "properties": {"unique":true}},
+        {"name": "password", "type": "string", "properties": {}},
+        {"name": "username", "type": "string", "properties": {}},
+        {"name": "created_at", "type": "datetime", "properties": {}},
+        {"name": "updated_at", "type": "datetime", "properties": {}}
+      ]
+
+    }
+
+  }
+
+}
